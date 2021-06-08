@@ -48,5 +48,10 @@ namespace Game_store.Services
         {
             _games.Remove(game);
         }
+
+        public Game Get(int id)
+        {
+            return _games.FirstOrDefault(x => x.Id == id);
+        }
     }
 }

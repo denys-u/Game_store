@@ -10,6 +10,8 @@ namespace Game_store.Services
     {
         IReadOnlyCollection<Game> GetGames();
 
+        Game Get(int id);
+
         void Add(Game game, SystemRequirements requirements);
 
         void Delete(Game game, SystemRequirements requirements);
