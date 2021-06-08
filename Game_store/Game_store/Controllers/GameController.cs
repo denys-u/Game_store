@@ -15,11 +15,23 @@ namespace Game_store.Controllers
     {
         private readonly IGameService _gameService;
         private readonly ILogger<GameController> _logger;
+        private object _games;
 
         public GameController(IGameService gameService, ILogger<GameController> logger)
         {
             _logger = logger;
             _gameService = gameService;
+        }
+
+        [HttpGet]
+        [Route("/[controller]/{id}")]
+        public IActionResult Get()
+        {
+        }
+
+        [HttpDelete]
+        public IActionResult Delete()
+        {
         }
     }
 }
